@@ -63,6 +63,7 @@ class Login extends Component {
 
 // creating login styling
 // Must use hexcodes as a string
+// var HomePage = React.createclass({ --> attempt to figure out body/bckgrnd
 render () {
   const styles = StyleSheet.create({
     body: {background: '#141320'},
@@ -93,7 +94,11 @@ render () {
 
   });
   // Can't figure out how to get background of whole pg black
-  return <body className={css(styles.body)}>  
+  return (
+    // <BodyAttribute bodyClass= 'page' className={css(styles.body)}>
+    //   <HomePage/>  ---> attempt to figure out body/bckgrnd
+    // body tag doesn't seem to be the solution
+    // changed bckgrnd color by addint to tag in index.html... don't know if there's a better way
           <div className={css(styles.container)}>
             <div className="row">
             {/* We should move the div more to the center of the page */}
@@ -124,9 +129,10 @@ render () {
               </div>
             </div>
           </div>
-        </body>
-}
+    // </BodyAttribute> ---> attempt to figure out body/bckgrnd
+  );
 
+}
 }
 
 export default Login;
