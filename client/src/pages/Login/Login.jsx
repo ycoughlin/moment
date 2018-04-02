@@ -75,7 +75,8 @@ render () {
       paddingLeft: 20,
       paddingRight:20,
       borderRadius: 15,
-      borderWidth: 5},
+      borderWidth: 5
+    },
     h4: {
       paddingBottom: 10, 
       color: '#452677',
@@ -86,11 +87,13 @@ render () {
     buttonLog: {
       background: '#7e7fa5', 
       color: 'lavender',
-      borderRadius: 15},
+      borderRadius: 15
+    },
     buttonSign: {
       background: '#141320', 
       color: 'lavender',
-      borderRadius: 15},
+      borderRadius: 15
+    },
 
   });
   // Can't figure out how to get background of whole pg black
@@ -111,10 +114,18 @@ render () {
                   {/* Expanded input tags for styling */}
                   {/* We need to move the email & password/login&sign up on top of each other */}
                     <label>
-                      <input type="email" id="userName" className={css(styles.formCtrl)} placeholder="Email"/>
+                      <input 
+                        type="email" 
+                        id="userName" 
+                        className={css(styles.formCtrl)} 
+                        placeholder="Email"/>
                     </label>
                     <label>
-                      <input type="password" id="userPassword" class={css(styles.formCtrl)} placeholder="Password"/>
+                      <input 
+                        type="password" 
+                        id="userPassword" 
+                        className={css(styles.formCtrl)} 
+                        placeholder="Password"/>
                     </label>
                     <div className={css(styles.wrapper)}>
                     {/* Removed <input type="submit" value="Login"/> as it wouldn't allow 

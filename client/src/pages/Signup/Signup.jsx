@@ -88,6 +88,98 @@ class Signup extends Component {
       </div>
     )
   }
+
+// Attempt to place above into styling
+// Error: lines 129-173: 'css' is not defined 
+
+  // render() {
+  //   const styles = StyleSheet.create({
+  //     container2: { padding: 25, position: 'fixed' },
+  //     formLogin2: {
+  //       background: 'lavenderblush',
+  //       paddingTop: 10,
+  //       paddingBottom: 20,
+  //       paddingLeft: 20,
+  //       paddingRight: 20,
+  //       borderRadius: 15,
+  //       borderWidth: 5
+  //     },
+  //     h: {
+  //       paddingBottom: 10,
+  //       color: '#452677',
+  //       textAlign: 'center',
+  //       fontFamily: 'Montserrat'
+  //     },
+  //     formCtrl2: { borderRadius: 5 },
+  //     wrapper2: { textAlign: 'center' },
+  //     buttonCreate: {
+  //       background: '#7e7fa5',
+  //       color: 'lavender',
+  //       borderRadius: 15
+  //     },
+  //     buttonBck: {
+  //       background: '#141320',
+  //       color: 'lavender',
+  //       borderRadius: 15
+  //     },
+
+  //   });
+
+  //   return 
+  //     <div className={css(styles.container2)}>
+  //       <div className="row">
+  //         {/* We should move the div more to the center of the page */}
+  //         <div className="col-md-offset-5 col-md-3">
+  //           <div className={css(styles.formLogin2)}>
+  //             <Link to="/">
+  //               <button className={css(styles.buttonBck)}>Back to Login</button>
+  //             </Link>              
+  //             {/* Google Fonts - Montserrat; couldn't get Antipasto w/out paying
+  //             Can't get it to display */}
+  //             <h4 className={css(styles.h)}>Create Account</h4>
+  //             <form onSubmit={this.handleFormSubmit}>
+  //               {/* Expanded input tags for styling */}
+  //               {/* We need to move the email & password/login&sign up on top of each other */}
+  //               <label>
+  //                 <input 
+  //                   type="email" 
+  //                   value={this.state.email}
+  //                   name="email"
+  //                   className={css(styles.formCtrl2)} 
+  //                   placeholder="Email"
+  //                   onChange={this.handleInputChange} />
+  //               </label>
+  //               <label>
+  //                 <input 
+  //                   type="password" 
+  //                   value={this.state.password1}
+  //                   name="password1" 
+  //                   class={css(styles.formCtrl2)} 
+  //                   placeholder="Password"
+  //                   onChange={this.handleInputChange} />
+  //               </label>
+  //               <label>
+  //               <input
+  //                 type="password"
+  //                 value={this.state.password2}
+  //                 name="password2"
+  //                 class={css(styles.formCtrl2)}
+  //                 placeholder="Verify Password"
+  //                 onChange={this.handleInputChange} />
+  //               </label>
+  //               <div className={css(styles.wrapper2)}>
+  //                 {/* Removed <input type="submit" value="Login"/> as it wouldn't allow 
+  //                 for me to stylize the login button */}
+  //                 <button className={css(styles.buttonCreate)}>Create</button>
+  //               </div>
+  //             </form>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </div>
+    
+
+  // }
 }
 
 export default Signup;
