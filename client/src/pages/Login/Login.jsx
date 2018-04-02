@@ -1,7 +1,9 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import API from "../../utils/API";
-import NetworkTag from '../../components/NetworkTag'
+import NetworkTag from '../../components/NetworkTag';
+import { StyleSheet, css } from 'aphrodite';
+
 
 class Login extends Component {
   constructor() {
@@ -46,31 +48,85 @@ class Login extends Component {
     })
   }
 
-  render() {
-    return (
-      <div>
-        <form onSubmit={this.handleFormSubmit}>
-          <label>
-            Email:
-            <input type="email"/>
-          </label>
-          <label>
-            Password:
-            <input type="password" />
-          </label>
-          <input type="submit" value="Login"/>
-        </form>
-        <Link to="/signup">
-          <button>Create Account</button>
-        </Link>
-        <p>Sample user profile:</p>
-        <NetworkTag network='facebook'/>
-        <NetworkTag network='snapchat' username='blimey123'/>
-        <NetworkTag network='twitch'/>
-        <NetworkTag network='twitter'/>
-      </div>
-    )
-  }
+// testing css object
+  // render() {
+  //   const styles = StyleSheet.create({
+  //     lavenderblush: {
+  //       backgroundColor: 'lavenderblush'
+  //     },
+  //   })  
+  //   return <div>
+  //     <span className={css(styles.lavenderblush)}>
+  //       Test
+  //     </span>
+  //     </div>
+
+// creating login styling
+// Must use hexcodes as a string
+render () {
+  const styles = StyleSheet.create({
+    body: {background: '#141320'},
+    container: {padding: 25, position: 'fixed'},
+    formLogin: {
+      background: 'lavenderblush', 
+      paddingTop: 10, 
+      paddingBottom: 20, 
+      paddingLeft: 20,
+      paddingRight:20,
+      borderRadius: 15,
+      borderWidth: 5},
+    h4: {
+      paddingBottom: 10, 
+      color: '#452677',
+      textAlign: 'center',
+      fontFamily: 'Montserrat'},
+    formCtrl: {borderRadius: 5},
+    wrapper: {textAlign: 'center'},
+    buttonLog: {
+      background: '#7e7fa5', 
+      color: 'lavender',
+      borderRadius: 15},
+    buttonSign: {
+      background: '#141320', 
+      color: 'lavender',
+      borderRadius: 15},
+
+  });
+  // Can't figure out how to get background of whole pg black
+  return <body className={css(styles.body)}>  
+          <div className={css(styles.container)}>
+            <div className="row">
+            {/* We should move the div more to the center of the page */}
+              <div className="col-md-offset-5 col-md-3">
+                <div className={css(styles.formLogin)}>
+                {/* Google Fonts - Montserrat; couldn't get Antipasto w/out paying
+              Can't get it to display */}
+                  <h4 className={css(styles.h4)}>Welcome</h4>
+                  <form onSubmit={this.handleFormSubmit}>
+                  {/* Expanded input tags for styling */}
+                  {/* We need to move the email & password/login&sign up on top of each other */}
+                    <label>
+                      <input type="email" id="userName" className={css(styles.formCtrl)} placeholder="Email"/>
+                    </label>
+                    <label>
+                      <input type="password" id="userPassword" class={css(styles.formCtrl)} placeholder="Password"/>
+                    </label>
+                    <div className={css(styles.wrapper)}>
+                    {/* Removed <input type="submit" value="Login"/> as it wouldn't allow 
+                  for me to stylize the login button */}
+                      <button className={css(styles.buttonLog)}>Login</button>
+                      <Link to="/singup">
+                        <button className={css(styles.buttonSign)}>Create Account</button>
+                      </Link>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </body>
+}
+
 }
 
 export default Login;
