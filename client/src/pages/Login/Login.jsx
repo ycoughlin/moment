@@ -48,18 +48,6 @@ class Login extends Component {
     })
   }
 
-// testing css object
-  // render() {
-  //   const styles = StyleSheet.create({
-  //     lavenderblush: {
-  //       backgroundColor: 'lavenderblush'
-  //     },
-  //   })  
-  //   return <div>
-  //     <span className={css(styles.lavenderblush)}>
-  //       Test
-  //     </span>
-  //     </div>
 
 // creating login styling
 // Must use hexcodes as a string
@@ -67,23 +55,27 @@ class Login extends Component {
 render () {
   const styles = StyleSheet.create({
     body: {background: '#141320'},
-    container: {padding: 25, position: 'fixed'},
+    container: {padding: 350, position: 'fixed'},
     formLogin: {
       background: 'lavenderblush', 
-      paddingTop: 10, 
+      paddingTop: 20, 
       paddingBottom: 20, 
-      paddingLeft: 20,
+      paddingLeft: 100,
       paddingRight:20,
       borderRadius: 15,
       borderWidth: 5
     },
     h4: {
       paddingBottom: 10, 
+      paddingRight: 60,
       color: '#452677',
       textAlign: 'center',
       fontFamily: 'Montserrat'},
     formCtrl: {borderRadius: 5},
-    wrapper: {textAlign: 'center'},
+    wrapper: {
+      textAlign: 'center', 
+      paddingTop: 10,
+  },
     buttonLog: {
       background: '#7e7fa5', 
       color: 'lavender',
