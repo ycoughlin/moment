@@ -27,7 +27,7 @@ module.exports = {
     db.User
       .find({realName: {'$regex': req.params.query, '$options': 'i'}})
       // un comment this if you want to test searching by realNames and nicknames
-      // .find(query)
+      .find(query)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err))
   },
