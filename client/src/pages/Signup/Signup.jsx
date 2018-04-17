@@ -62,7 +62,7 @@ class Signup extends Component {
       return <Redirect to={{ pathname: this.state.redirectTo}} />
     } else {
       return (
-        <div>
+        <div className="all-contect-signup">
           <header>
             {/* <img src={mainLogo} className="honeydew"/>              */}
                         {/* version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

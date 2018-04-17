@@ -11,6 +11,7 @@
     border-radius: 35px;
     font-family: Helvetica;
     top: 254px;
+    
   
   }
   .Moment-login-page{
@@ -43,28 +44,24 @@
     margin-left: 9px;
 }
 body { 
-  background: linear-gradient(bottom right, #dad9e478, #FFDCF6, #dee4eb);
-  display: table-cell;
-  vertical-align: middle;
+  height: 100%; 
+  width:100%;
+  display: inline-block;
+  zoom: 1;
+  display*: inline;
 }
 html, body {
   height: 100%;
+  width: 100%; 
+  margin: 0 auto;
+  background: linear-gradient(bottom right, #dad9e478, #FFDCF6, #dee4eb );
+}
+
+.All-Content{ 
   max-width: 500px;
   margin: auto;
 
 }
-
-
-/* body { 
-  background: linear-gradient(bottom right, #dad9e478, #FFDCF6, #dee4eb);
-  display: table-cell;
-  vertical-align: middle;
-
-}
-html, body {
-  max-width: 500px;
-  margin: auto;
-} */
 
 .create-button{ 
 margin-top: 20px;
