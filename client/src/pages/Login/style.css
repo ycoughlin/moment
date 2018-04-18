@@ -62,7 +62,6 @@ html, body {
   margin: auto;
 
 }
-
 .create-button{ 
 margin-top: 20px;
 margin-right: 8px;
@@ -105,14 +104,11 @@ a:link {
   margin-top: 50px;
   margin-left: 50px;
 }
-/* error alert */
 .error-alert {
   color: #f6ffdc;
   font-family: 'Nanum Gothic', sans-serif;
 }
-/* .honey-login {
-    bottom: 25px;
-} */
+
 .honey-head {
   left: 300px;
 }
